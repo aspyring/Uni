@@ -124,7 +124,7 @@ def login_system(users):
     print("Login attempts exhausted. Exiting.")
 
 if __name__ == "__main__":
-    admin = Admin("admin@example.com", "admin123")
+    admin = Admin("admintest", "ad123")
     users = [admin]
 
     login_system(users)
