@@ -5,7 +5,6 @@ class User:
         self.password = password
 
     def login(self, entered_password):
-        # login logic
         return self.password == entered_password
 class Admin(User):
     def __init__(self, username, password):
@@ -50,7 +49,6 @@ class Admin(User):
     def register_tutor(self):
         username = input("Enter tutor's username: ")
         password = input("Enter tutor's password: ")
-        # commented out to have the code run
         # tutor = Tutor(username, password)
         # self.tutors.append(tutor)
         print(f"Tutor {username} registered successfully.")
@@ -78,7 +76,6 @@ class Admin(User):
     def register_receptionist(self):
         username = input("Enter receptionist's username: ")
         password = input("Enter receptionist's password: ")
-        # commented out to have the code run
         # receptionist = Receptionist(username, password)
         # self.receptionists.append(receptionist)
         print(f"Receptionist {username} registered successfully.")
