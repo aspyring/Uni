@@ -14,37 +14,30 @@ class Admin(User):
 
     def admin_menu(self):
         while True:
-            print("Admin Menu:")
-            print("1. Register Tutor")
-            print("2. Delete Tutor")
-            print("3. Assign Tutor to Level and Subject")
-            print("4. Register Receptionist")
-            print("5. Delete Receptionist")
-            print("6. View Monthly Income Report")
-            print("7. Update Profile")
-            print("8. Logout")
+            print(f"Admin Menu: \n1. Register Tutor \n2. Delete Tutor \n3. Assign Tutor to Level and Subject \n4. Register Receptionist \n5. Delete Receptionist \n6. View Monthly Income Report \n7. Update Profile \n8. Logout")
 
             choice = input("Enter your choice: ")
+            match choice:
+                case "1" :
+                    self.register_tutor()
+                case "2":
+                    self.delete_tutor()
+                case "3":
+                    self.assign_tutor()
+                case "4":
+                    self.register_receptionist()
+                case "5":
+                    self.delete_receptionist()
+                case "6":
+                    self.view_income_report()
+                case "7":
+                    self.update_profile()
+                case "8":
+                    print("Logging out.")
+                    break
+                case _:
+                    print("Invalid choice. Please try again.")
 
-            if choice == "1":
-                self.register_tutor()
-            elif choice == "2":
-                self.delete_tutor()
-            elif choice == "3":
-                self.assign_tutor()
-            elif choice == "4":
-                self.register_receptionist()
-            elif choice == "5":
-                self.delete_receptionist()
-            elif choice == "6":
-                self.view_income_report()
-            elif choice == "7":
-                self.update_profile()
-            elif choice == "8":
-                print("Logging out.")
-                break
-            else:
-                print("Invalid choice. Please try again.")
 
     def register_tutor(self):
         username = input("Enter tutor's username: ")
